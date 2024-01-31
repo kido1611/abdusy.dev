@@ -2,6 +2,22 @@
 
 <template>
   <main>
-    <ContentDoc />
+    <ContentDoc>
+      <template #default="{ doc }">
+        <pre>
+          {{ doc }}
+        </pre>
+        <hr />
+        <ContentRenderer :value="doc" />
+        <hr />
+        <section id="toc">
+          <ul>
+            <li v-for="toc in doc.body?.toc?.links" :key="toc.id">
+              <NuxtLink :to="`#${toc.id}`">{{ toc.text }}</NuxtLink>
+            </li>
+          </ul>
+        </section>
+      </template>
+    </ContentDoc>
   </main>
 </template>
