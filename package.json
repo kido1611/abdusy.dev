@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "latest",
     "@nuxtjs/tailwindcss": "latest",
     "@pinia/nuxt": "latest",
     "@vueuse/nuxt": "latest",
