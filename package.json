@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/content": "latest",
     "@nuxtjs/tailwindcss": "latest",
+    "@pinia-plugin-persistedstate/nuxt": "latest",
     "@pinia/nuxt": "latest",
     "@vueuse/nuxt": "latest",
     "nuxt": "^3.9.3",
