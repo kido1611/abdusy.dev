@@ -1,0 +1,37 @@
+---
+title: "Composable vs Pinia Store"
+description: "Perbandingan dan contoh penggunaan antara Composable dengan Pinia store"
+author: "Muhammad Abdusy Syukur"
+created_at: "2024-02-02 06:09:00"
+---
+
+# Composable vs Pinia Store
+
+Perbandingan penggunaan `composable` dengan `pinia store`. Terdapat kelebihan ketika menggunakan `pinia store`, yakni nilai yang disimpan masih tetap terjaga ketika berpindah halaman.
+
+Dengan mengkombinasikan `pinia` dengan `useLocalStorage` atau `pinia-persistedstate`, nilai yang disimpan dapat dimuat kembali ketika halaman dimuat ulang.
+
+## Composable
+
+Berkas yang digunakan :
+
+1. `composables/counter2.ts`
+2. `components/ComposableCounter.vue`
+
+## Pinia
+
+Berkas yang digunakan :
+
+1. `store/counter.ts`
+2. `components/PiniaCounter.vue`
+
+## Persisted Pinia
+
+Berkas yang digunakan :
+
+1. `store/counterStorage.ts`
+2. `components/PiniaStorageCounter.vue`
+
+## Hasil
+
+Cek hasilnya di [Counter](/counter)
