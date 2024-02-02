@@ -6,8 +6,7 @@
       <ol>
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/blogs">Blogs</NuxtLink></li>
-        <li><NuxtLink to="/counter">Counter</NuxtLink></li>
-        <li><NuxtLink to="/model">Model</NuxtLink></li>
+        <li><NuxtLink to="/examples">Examples</NuxtLink></li>
       </ol>
     </header>
     <hr />
