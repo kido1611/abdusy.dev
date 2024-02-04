@@ -1,4 +1,5 @@
 import { defineStore, skipHydrate } from "pinia";
+import { useLocalStorage } from "@vueuse/core";
 
 export const useCounterStore = defineStore("counterStore", () => {
   const count = useLocalStorage("counter-local-store", 0);
