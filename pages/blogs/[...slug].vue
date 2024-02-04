@@ -4,8 +4,6 @@
   <main>
     <ContentDoc>
       <template #default="{ doc }">
-        <ContentRenderer :value="doc" />
-        <hr />
         <section id="toc">
           <ul>
             <li v-for="toc in doc.body?.toc?.links" :key="toc.id">
@@ -13,6 +11,8 @@
             </li>
           </ul>
         </section>
+        <hr />
+        <ContentRenderer :value="doc" />
       </template>
     </ContentDoc>
   </main>
