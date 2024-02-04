@@ -4,10 +4,6 @@
   <main>
     <ContentDoc>
       <template #default="{ doc }">
-        <pre>
-          {{ doc }}
-        </pre>
-        <hr />
         <ContentRenderer :value="doc" />
         <hr />
         <section id="toc">
