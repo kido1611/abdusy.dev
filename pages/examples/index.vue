@@ -14,6 +14,9 @@
           >Hidration Mismatch - useState</NuxtLink
         >
       </li>
+      <li>
+        <NuxtLink to="/examples/grid-container">Grid Container</NuxtLink>
+      </li>
     </ol>
   </div>
 </template>

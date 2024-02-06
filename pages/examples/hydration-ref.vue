@@ -14,10 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-type Link = {
-  name: string;
-  url: string;
-};
+import type { Link } from "./../../types";
 
 const linkList = ref<Link[]>(generateRandomLinks());
 
