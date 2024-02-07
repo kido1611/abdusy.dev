@@ -1,26 +1,41 @@
 <template>
   <div>
     <ol>
-      <li><NuxtLink to="/examples/counter">Counter</NuxtLink></li>
-      <li><NuxtLink to="/examples/model">Model</NuxtLink></li>
-      <li><NuxtLink to="/examples/shallow-ref">Shallow Ref</NuxtLink></li>
-      <li>
-        <NuxtLink to="/examples/hydration-ref"
-          >Hidration Mismatch - ref</NuxtLink
-        >
-      </li>
-      <li>
-        <NuxtLink to="/examples/hydration-use-state"
-          >Hidration Mismatch - useState</NuxtLink
-        >
-      </li>
-      <li>
-        <NuxtLink to="/examples/grid-container">Grid Container</NuxtLink>
+      <li v-for="link in links" :key="link.url">
+        <NuxtLink :to="link.url">{{ link.name }}</NuxtLink>
       </li>
     </ol>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import type { Link } from "./../../types";
+const links: Link[] = [
+  {
+    name: "Counter",
+    url: "/examples/counter",
+  },
+  {
+    name: "Model",
+    url: "/examples/model",
+  },
+  {
+    name: "Shallow Ref",
+    url: "/examples/shallow-ref",
+  },
+  {
+    name: "Hydration Mismatch - ref",
+    url: "/examples/hydration-ref",
+  },
+  {
+    name: "Hydration Mismatch - useState",
+    url: "/examples/hydration-use-state",
+  },
+  {
+    name: "Grid Container",
+    url: "/examples/grid-container",
+  },
+];
+</script>
 
 <style></style>
