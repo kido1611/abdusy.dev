@@ -8,4 +8,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@pinia-plugin-persistedstate/nuxt",
   ],
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
 });
