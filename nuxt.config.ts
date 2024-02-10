@@ -10,13 +10,4 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@pinia-plugin-persistedstate/nuxt",
   ],
-  content: {
-    sources: {
-      content: {
-        driver: "fs",
-        prefix: "/blogs", // All contents inside this source will be prefixed with `/docs`
-        base: path.resolve(__dirname, "content"),
-      },
-    },
-  },
 });
