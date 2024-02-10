@@ -12,7 +12,7 @@
           </ul>
         </section>
         <hr />
-        <ContentRenderer :value="doc" />
+        <ContentRenderer :value="doc" class="prose" />
       </template>
     </ContentDoc>
   </main>
