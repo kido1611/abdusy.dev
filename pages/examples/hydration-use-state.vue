@@ -6,7 +6,9 @@
     </p>
     <ul>
       <li v-for="link in linkList" :key="link.url">
-        <NuxtLink :to="link.url">{{ link.name }}</NuxtLink>
+        <NuxtLink :to="link.url" :external="true" target="_blank">{{
+          link.name
+        }}</NuxtLink>
       </li>
     </ul>
   </div>
@@ -37,7 +39,7 @@ function generateRandomLink() {
     const randomIndex = Math.floor(Math.random() * characters.length);
     link += characters[randomIndex];
   }
-  return `/examples/hydrations/${link}`;
+  return `/hydrations/${link}`;
 }
 </script>
 
