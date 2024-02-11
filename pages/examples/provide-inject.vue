@@ -33,7 +33,7 @@ function logout() {
 }
 
 provide(ProvideInjectKey, {
-  user: user,
+  user: readonly(user),
   login: login,
   logout: logout,
 });
