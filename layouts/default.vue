@@ -11,6 +11,13 @@
     </header>
     <hr />
     <slot></slot>
+
+    <footer>
+      <p>
+        This site was created using
+        <Icon name="vscode-icons:file-type-nuxt" size="28" />
+      </p>
+    </footer>
   </div>
 </template>
 
