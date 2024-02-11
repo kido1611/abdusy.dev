@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/content",
     "@pinia-plugin-persistedstate/nuxt",
+    "nuxt-icon",
   ],
   content: {
     highlight: {
