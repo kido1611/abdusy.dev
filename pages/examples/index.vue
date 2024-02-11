@@ -43,6 +43,10 @@ const links: Link[] = [
     name: "Provide Inject",
     url: "/examples/provide-inject",
   },
+  {
+    name: "URL as State",
+    url: "/examples/url-state",
+  },
 ];
 </script>
 
