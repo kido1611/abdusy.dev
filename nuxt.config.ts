@@ -8,6 +8,11 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@pinia-plugin-persistedstate/nuxt",
   ],
+  content: {
+    highlight: {
+      theme: "github-dark",
+    },
+  },
   typescript: {
     strict: true,
     typeCheck: true,
