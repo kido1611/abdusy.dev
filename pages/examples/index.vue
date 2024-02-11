@@ -35,6 +35,14 @@ const links: Link[] = [
     name: "Grid Container",
     url: "/examples/grid-container",
   },
+  {
+    name: "Prop Event",
+    url: "/examples/prop-event",
+  },
+  {
+    name: "Provide Inject",
+    url: "/examples/provide-inject",
+  },
 ];
 </script>
 
