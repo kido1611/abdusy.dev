@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Link } from "./../../types";
+import type { Link } from "~/types";
 const linkList = useState<Link[]>("random-links", () => generateRandomLinks());
 
 function generateRandomLinks() {

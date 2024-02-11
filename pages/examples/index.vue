@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Link } from "./../../types";
+import type { Link } from "~/types";
 const links: Link[] = [
   {
     name: "Counter",
