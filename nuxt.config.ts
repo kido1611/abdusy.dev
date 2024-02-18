@@ -18,4 +18,8 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
+  runtimeConfig: {
+    tursoUrl: "",
+    tursoAuthToken: "",
+  },
 });
