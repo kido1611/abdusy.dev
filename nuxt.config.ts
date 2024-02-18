@@ -27,5 +27,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     tursoUrl: "",
     tursoAuthToken: "",
+    isLoggingEnabled: false,
   },
 });
