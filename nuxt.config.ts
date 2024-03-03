@@ -4,29 +4,30 @@ export default defineNuxtConfig({
     enabled: true,
 
     timeline: {
-      enabled: true,
-    },
+      enabled: true
+    }
   },
   modules: [
-    "@nuxtjs/tailwindcss",
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@nuxt/content",
-    "@pinia-plugin-persistedstate/nuxt",
-    "nuxt-icon",
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/content',
+    '@pinia-plugin-persistedstate/nuxt',
+    'nuxt-icon',
+    '@nuxtjs/eslint-module'
   ],
   content: {
     highlight: {
-      theme: "github-dark",
-    },
+      theme: 'github-dark'
+    }
   },
   typescript: {
     strict: true,
-    typeCheck: true,
+    typeCheck: true
   },
   runtimeConfig: {
-    tursoUrl: "",
-    tursoAuthToken: "",
-    isLoggingEnabled: false,
-  },
-});
+    tursoUrl: '',
+    tursoAuthToken: '',
+    isLoggingEnabled: false
+  }
+})

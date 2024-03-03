@@ -1,0 +1,6 @@
+.nuxt/
+.output/
+.vscode/
+node_modules/
+pnpm-lock.yaml
+drizzle/
