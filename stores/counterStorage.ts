@@ -1,21 +1,21 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useCounterStorageStore = defineStore("counterStorageStore", {
+export const useCounterStorageStore = defineStore('counterStorageStore', {
   state: () => ({
-    count: 0,
+    count: 0
   }),
   getters: {
-    doubleCount: (state) => state.count * 2,
+    doubleCount: (state) => state.count * 2
   },
   actions: {
     increment() {
-      this.count++;
+      this.count++
     },
     decrement() {
-      this.count--;
-    },
+      this.count--
+    }
   },
   persist: {
-    storage: persistedState.localStorage,
-  },
-});
+    storage: persistedState.localStorage
+  }
+})

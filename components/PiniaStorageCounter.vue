@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-const counter = useCounterStorageStore();
+const counter = useCounterStorageStore()
 </script>
 
 <style></style>

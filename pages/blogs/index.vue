@@ -28,29 +28,28 @@
 
 <script lang="ts" setup>
 useSeoMeta({
-  title: "Blogs",
-  description: "Anything I have written",
-  ogTitle: "Blogs",
-  ogDescription: "Anything I have written",
-});
+  title: 'Blogs',
+  description: 'Anything I have written',
+  ogTitle: 'Blogs',
+  ogDescription: 'Anything I have written'
+})
 
 useHead({
   htmlAttrs: {
-    lang: "id",
-  },
-});
+    lang: 'id'
+  }
+})
 
 const {
   data: blogs,
   error,
-  pending,
-  refresh,
-} = useAsyncData("blogs", () =>
-  queryContent("blogs")
+  pending
+} = useAsyncData('blogs', () =>
+  queryContent('blogs')
     .sort({ created_at: -1 })
-    .only(["_path", "title", "description", "author", "created_at"])
+    .only(['_path', 'title', 'description', 'author', 'created_at'])
     .find()
-);
+)
 </script>
 
 <style></style>

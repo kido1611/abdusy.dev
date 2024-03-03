@@ -1,25 +1,21 @@
-export const useUrlstate = (
-  key: string,
-  defaultValue: string = "",
-  isReplace: boolean = true
-) => {
-  const router = useRouter();
-  const route = useRoute();
+export const useUrlstate = (key: string, defaultValue: string = '', isReplace: boolean = true) => {
+  const router = useRouter()
+  const route = useRoute()
 
-  const currentValue = route.query[key]?.toString();
+  const currentValue = route.query[key]?.toString()
 
-  const state = ref<string>(currentValue ?? defaultValue);
+  const state = ref<string>(currentValue ?? defaultValue)
 
-  watch(state, (current, previous) => {
-    const currentQuery = { ...route.query };
-    currentQuery[key] = current;
+  watch(state, (current) => {
+    const currentQuery = { ...route.query }
+    currentQuery[key] = current
 
     router.push({
       path: route.path,
       query: currentQuery,
-      replace: isReplace,
-    });
-  });
+      replace: isReplace
+    })
+  })
 
-  return state;
-};
+  return state
+}

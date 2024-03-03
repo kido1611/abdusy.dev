@@ -17,19 +17,19 @@
 </template>
 
 <script lang="ts" setup>
-import type { User } from "~/types";
+import type { User } from '~/types'
 
-const user = ref<User>();
+const user = ref<User>()
 
 function login() {
   user.value = {
-    id: "user-id",
-    name: "Muhammad Abdusy Syukur",
-  };
+    id: 'user-id',
+    name: 'Muhammad Abdusy Syukur'
+  }
 }
 
 function logout() {
-  user.value = undefined;
+  user.value = undefined
 }
 </script>
 

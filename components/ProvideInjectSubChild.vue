@@ -12,17 +12,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ProvideInjectKey } from "@/symbols";
+import { ProvideInjectKey } from '@/symbols'
 
 const { user, login, logout } = inject(ProvideInjectKey, {
   user: undefined,
   login: () => {},
-  logout: () => {},
-});
+  logout: () => {}
+})
 
 function change() {
   if (user && user.value) {
-    user.value.name = user?.value?.name + "change";
+    user.value.name = user?.value?.name + 'change'
   }
 }
 </script>

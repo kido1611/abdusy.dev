@@ -1,45 +1,41 @@
 <template>
   <div>
-    <p>
-      Coba refresh halaman ini, maka tidak akan muncul warning hydration
-      missmatch.
-    </p>
+    <p>Coba refresh halaman ini, maka tidak akan muncul warning hydration missmatch.</p>
     <ul>
       <li v-for="link in linkList" :key="link.url">
-        <NuxtLink :to="link.url" :external="true" target="_blank">{{
-          link.name
-        }}</NuxtLink>
+        <NuxtLink :to="link.url" :external="true" target="_blank">
+          {{ link.name }}
+        </NuxtLink>
       </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { Link } from "~/types";
-const linkList = useState<Link[]>("random-links", () => generateRandomLinks());
+import type { Link } from '~/types'
+const linkList = useState<Link[]>('random-links', () => generateRandomLinks())
 
 function generateRandomLinks() {
-  const links: Link[] = [];
+  const links: Link[] = []
   for (let i = 0; i < 20; i++) {
-    const link = generateRandomLink();
+    const link = generateRandomLink()
     links.push({
-      name: "data" + i,
-      url: link,
-    });
+      name: 'data' + i,
+      url: link
+    })
   }
-  return links;
+  return links
 }
 
 function generateRandomLink() {
-  const characters =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  const length = 10;
-  let link = "";
+  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+  const length = 10
+  let link = ''
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    link += characters[randomIndex];
+    const randomIndex = Math.floor(Math.random() * characters.length)
+    link += characters[randomIndex]
   }
-  return `/hydrations/${link}`;
+  return `/hydrations/${link}`
 }
 </script>
 

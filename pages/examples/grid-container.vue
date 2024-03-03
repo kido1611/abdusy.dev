@@ -3,66 +3,55 @@
     <section class="py-6 col-[content]">
       <h2>Title</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum,
-        fugiat ut ab repellendus molestiae? Nam, esse excepturi, optio eum
-        quidem officia, temporibus eveniet nesciunt repellendus molestiae
-        doloribus iste ut!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum, fugiat ut ab
+        repellendus molestiae? Nam, esse excepturi, optio eum quidem officia, temporibus eveniet
+        nesciunt repellendus molestiae doloribus iste ut!
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam
-        et dolorum doloremque assumenda explicabo nihil nisi, ut facere natus
-        itaque temporibus, eius eos necessitatibus, saepe ab rem minus
-        praesentium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam et dolorum
+        doloremque assumenda explicabo nihil nisi, ut facere natus itaque temporibus, eius eos
+        necessitatibus, saepe ab rem minus praesentium.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea
-        labore harum pariatur sed ab voluptatem laborum ex sapiente adipisci
-        inventore, libero dolore fugit commodi! Ipsum, doloribus? Dolore,
-        officiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea labore harum
+        pariatur sed ab voluptatem laborum ex sapiente adipisci inventore, libero dolore fugit
+        commodi! Ipsum, doloribus? Dolore, officiis.
       </p>
     </section>
-    <section
-      class="content-grid col-[full-width] bg-blue-800 py-6 *:col-[content]"
-    >
+    <section class="content-grid col-[full-width] bg-blue-800 py-6 *:col-[content]">
       <h2>Title</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum,
-        fugiat ut ab repellendus molestiae? Nam, esse excepturi, optio eum
-        quidem officia, temporibus eveniet nesciunt repellendus molestiae
-        doloribus iste ut!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum, fugiat ut ab
+        repellendus molestiae? Nam, esse excepturi, optio eum quidem officia, temporibus eveniet
+        nesciunt repellendus molestiae doloribus iste ut!
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam
-        et dolorum doloremque assumenda explicabo nihil nisi, ut facere natus
-        itaque temporibus, eius eos necessitatibus, saepe ab rem minus
-        praesentium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam et dolorum
+        doloremque assumenda explicabo nihil nisi, ut facere natus itaque temporibus, eius eos
+        necessitatibus, saepe ab rem minus praesentium.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea
-        labore harum pariatur sed ab voluptatem laborum ex sapiente adipisci
-        inventore, libero dolore fugit commodi! Ipsum, doloribus? Dolore,
-        officiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea labore harum
+        pariatur sed ab voluptatem laborum ex sapiente adipisci inventore, libero dolore fugit
+        commodi! Ipsum, doloribus? Dolore, officiis.
       </p>
     </section>
     <section class="py-6 col-[content]">
       <h2>Title</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum,
-        fugiat ut ab repellendus molestiae? Nam, esse excepturi, optio eum
-        quidem officia, temporibus eveniet nesciunt repellendus molestiae
-        doloribus iste ut!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum, fugiat ut ab
+        repellendus molestiae? Nam, esse excepturi, optio eum quidem officia, temporibus eveniet
+        nesciunt repellendus molestiae doloribus iste ut!
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam
-        et dolorum doloremque assumenda explicabo nihil nisi, ut facere natus
-        itaque temporibus, eius eos necessitatibus, saepe ab rem minus
-        praesentium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam et dolorum
+        doloremque assumenda explicabo nihil nisi, ut facere natus itaque temporibus, eius eos
+        necessitatibus, saepe ab rem minus praesentium.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea
-        labore harum pariatur sed ab voluptatem laborum ex sapiente adipisci
-        inventore, libero dolore fugit commodi! Ipsum, doloribus? Dolore,
-        officiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea labore harum
+        pariatur sed ab voluptatem laborum ex sapiente adipisci inventore, libero dolore fugit
+        commodi! Ipsum, doloribus? Dolore, officiis.
       </p>
     </section>
     <section
@@ -70,22 +59,19 @@
     >
       <h2>Title</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum,
-        fugiat ut ab repellendus molestiae? Nam, esse excepturi, optio eum
-        quidem officia, temporibus eveniet nesciunt repellendus molestiae
-        doloribus iste ut!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum, fugiat ut ab
+        repellendus molestiae? Nam, esse excepturi, optio eum quidem officia, temporibus eveniet
+        nesciunt repellendus molestiae doloribus iste ut!
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam
-        et dolorum doloremque assumenda explicabo nihil nisi, ut facere natus
-        itaque temporibus, eius eos necessitatibus, saepe ab rem minus
-        praesentium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam et dolorum
+        doloremque assumenda explicabo nihil nisi, ut facere natus itaque temporibus, eius eos
+        necessitatibus, saepe ab rem minus praesentium.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea
-        labore harum pariatur sed ab voluptatem laborum ex sapiente adipisci
-        inventore, libero dolore fugit commodi! Ipsum, doloribus? Dolore,
-        officiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis earum ea labore harum
+        pariatur sed ab voluptatem laborum ex sapiente adipisci inventore, libero dolore fugit
+        commodi! Ipsum, doloribus? Dolore, officiis.
       </p>
     </section>
   </main>
@@ -98,9 +84,7 @@
   --padding-inline: 2rem;
   --content-max-width: 70ch;
   --breakout-max-width: 85ch;
-  --breakout-size: calc(
-    (var(--breakout-max-width) - var(--content-max-width)) / 2
-  );
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
   --full: minmax(var(--padding-inline), 1fr);
   --breakout: minmax(0, var(--breakout-size));

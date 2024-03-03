@@ -1,11 +1,10 @@
 <template>
   <div>
     <p>
-      Minim sint tempor consectetur et occaecat ad nostrud consectetur duis enim
-      anim proident consectetur. Eiusmod fugiat occaecat ea tempor dolore magna
-      duis do consequat occaecat. Aliquip eu aliqua quis quis ea cupidatat
-      aliquip nulla eu dolore proident. Duis laborum proident exercitation
-      incididunt.
+      Minim sint tempor consectetur et occaecat ad nostrud consectetur duis enim anim proident
+      consectetur. Eiusmod fugiat occaecat ea tempor dolore magna duis do consequat occaecat.
+      Aliquip eu aliqua quis quis ea cupidatat aliquip nulla eu dolore proident. Duis laborum
+      proident exercitation incididunt.
     </p>
 
     <div class="*:block mt-6">
@@ -25,8 +24,8 @@
 </template>
 
 <script lang="ts" setup>
-const value = ref("Contoh value");
-const firstName = ref("--nama depan--");
+const value = ref('Contoh value')
+const firstName = ref('--nama depan--')
 </script>
 
 <style></style>

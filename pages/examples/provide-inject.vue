@@ -16,27 +16,27 @@
 </template>
 
 <script lang="ts" setup>
-import type { User, UserInject } from "~/types";
-import { ProvideInjectKey } from "@/symbols";
+import type { User } from '~/types'
+import { ProvideInjectKey } from '@/symbols'
 
-const user = ref<User>();
+const user = ref<User>()
 
 function login() {
   user.value = {
-    id: "user-id",
-    name: "Muhammad Abdusy Syukur",
-  };
+    id: 'user-id',
+    name: 'Muhammad Abdusy Syukur'
+  }
 }
 
 function logout() {
-  user.value = undefined;
+  user.value = undefined
 }
 
 provide(ProvideInjectKey, {
   user: readonly(user),
   login: login,
-  logout: logout,
-});
+  logout: logout
+})
 </script>
 
 <style></style>

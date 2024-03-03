@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts" setup>
-const firstName = defineModel("firstName");
-const lastName = defineModel("lastName");
+const firstName = defineModel<string>('firstName')
+const lastName = defineModel<string>('lastName')
 </script>
 
 <style></style>

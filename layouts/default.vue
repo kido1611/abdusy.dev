@@ -4,13 +4,19 @@
       <p>Header</p>
       <CurrentRoute />
       <ol>
-        <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/blogs">Blogs</NuxtLink></li>
-        <li><NuxtLink to="/examples">Examples</NuxtLink></li>
+        <li>
+          <NuxtLink to="/"> Home </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/blogs"> Blogs </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/examples"> Examples </NuxtLink>
+        </li>
       </ol>
     </header>
     <hr />
-    <slot></slot>
+    <slot />
 
     <footer>
       <p>

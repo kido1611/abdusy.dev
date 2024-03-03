@@ -15,15 +15,15 @@
 </template>
 
 <script lang="ts" setup>
-const visibleState = useUrlstate("visible", "");
-const filterState = useUrlstate("filter", "name");
+const visibleState = useUrlstate('visible', '')
+const filterState = useUrlstate('filter', 'name')
 
 function changeVisible() {
-  visibleState.value = visibleState.value == "true" ? "false" : "true";
+  visibleState.value = visibleState.value == 'true' ? 'false' : 'true'
 }
 
 function changeFilter() {
-  filterState.value = filterState.value == "name" ? "email" : "name";
+  filterState.value = filterState.value == 'name' ? 'email' : 'name'
 }
 </script>
 

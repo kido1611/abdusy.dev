@@ -11,13 +11,13 @@
 </template>
 
 <script lang="ts" setup>
-const inputId = useId();
+const inputId = useId()
 
-const modelValue = defineModel();
+const modelValue = defineModel<string>()
 
 defineProps<{
-  label: string;
-}>();
+  label: string
+}>()
 </script>
 
 <style></style>

@@ -1,6 +1,8 @@
 <template>
   <div class="p-6">
-    <h2 class="font-bold text-2xl">{{ title }}</h2>
+    <h2 class="font-bold text-2xl">
+      {{ title }}
+    </h2>
     <p class="mt-3">Counter: {{ count }} -- {{ doubleCount }}</p>
     <div class="mt-3 flex flex-row items-center space-x-4">
       <button
@@ -22,16 +24,16 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{
-  title: string;
-  count: number;
-  doubleCount?: number;
-}>();
+defineProps<{
+  title: string
+  count: number
+  doubleCount?: number
+}>()
 
 const emit = defineEmits<{
-  (e: "increment"): void;
-  (e: "decrement"): void;
-}>();
+  (e: 'increment'): void
+  (e: 'decrement'): void
+}>()
 </script>
 
 <style></style>
