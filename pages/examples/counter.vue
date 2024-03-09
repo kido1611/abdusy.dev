@@ -8,6 +8,10 @@
       <PiniaStorageCounter />
       <PiniaStorageCounter />
     </div>
+
+    <template #fallback>
+      <p>Loading...</p>
+    </template>
   </ClientOnly>
 </template>
 

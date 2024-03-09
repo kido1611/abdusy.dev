@@ -1,5 +1,5 @@
 <template>
-  <Counter
+  <CounterItem
     title="Pinia Storage Counter"
     :count="counter.count"
     :double-count="counter.doubleCount"

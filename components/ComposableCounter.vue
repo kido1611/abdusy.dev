@@ -1,5 +1,5 @@
 <template>
-  <Counter
+  <CounterItem
     title="Composable Counter"
     :count="counter.count.value"
     :double-count="counter.doubleCount.value"
