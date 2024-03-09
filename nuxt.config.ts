@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@pinia-plugin-persistedstate/nuxt',
     'nuxt-icon',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxthq/studio'
   ],
   content: {
     highlight: {
