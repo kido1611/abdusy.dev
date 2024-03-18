@@ -23,6 +23,7 @@
     <pre>
       pending: {{ pending }}
     </pre>
+    <button type="button" @click="refreshBlogs">refresh</button>
   </div>
 </template>
 
@@ -43,13 +44,18 @@ useHead({
 const {
   data: blogs,
   error,
-  pending
-} = useAsyncData('blogs', () =>
+  pending,
+  refresh
+} = await useAsyncData('blogs', () =>
   queryContent('blogs')
     .sort({ created_at: -1 })
     .only(['_path', 'title', 'description', 'author', 'created_at'])
     .find()
 )
+
+function refreshBlogs() {
+refresh();
+}
 </script>
 
 <style></style>
