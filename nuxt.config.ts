@@ -29,5 +29,11 @@ export default defineNuxtConfig({
     tursoUrl: '',
     tursoAuthToken: '',
     isLoggingEnabled: false
+  },
+  routeRules: {
+    '/': { prerender: true },
+    '/blogs': { prerender: true },
+    '/blogs/**': { prerender: true },
+    '/api/**': { cors: true }
   }
 })
