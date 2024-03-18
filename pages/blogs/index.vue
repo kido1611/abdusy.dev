@@ -47,7 +47,7 @@ const {
   pending,
   refresh
 } = await useAsyncData('blogs', () =>
-  queryContent('blogs')
+  queryContent()
     .sort({ created_at: -1 })
     .only(['_path', 'title', 'description', 'author', 'created_at'])
     .find()
