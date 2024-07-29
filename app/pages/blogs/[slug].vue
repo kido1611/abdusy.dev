@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data, error, pending } = await useAsyncData(`blogs-${route.path}`, () =>
+const { data, error, status } = await useAsyncData(`blogs-${route.path}`, () =>
   queryContent().where({ _path: route.path }).findOne()
 )
 if (data.value) {
@@ -43,7 +43,7 @@ if (data.value) {
     </pre
       >
       <pre>
-      pending: {{ pending }}
+      status: {{ status }}
     </pre
       >
     </div>

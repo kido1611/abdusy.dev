@@ -21,7 +21,7 @@
       error: {{ error }}
     </pre>
     <pre>
-      pending: {{ pending }}
+      status: {{ status }}
     </pre>
     <button type="button" @click="refreshBlogs">refresh</button>
   </div>
@@ -44,7 +44,7 @@ useHead({
 const {
   data: blogs,
   error,
-  pending,
+  status,
   refresh
 } = await useAsyncData('blogs', () =>
   queryContent()
