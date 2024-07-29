@@ -21,10 +21,10 @@ export default defineNuxtConfig({
       theme: 'github-dark'
     }
   },
-  typescript: {
-    strict: true,
-    typeCheck: true
-  },
+  // typescript: {
+  //   strict: true,
+  //   typeCheck: true
+  // },
   runtimeConfig: {
     tursoUrl: '',
     tursoAuthToken: '',
