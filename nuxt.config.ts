@@ -35,5 +35,9 @@ export default defineNuxtConfig({
     '/blogs': { prerender: true },
     '/blogs/**': { prerender: true },
     '/api/**': { cors: true }
-  }
+  },
+  future: {
+    compatibilityVersion: 4,
+  },
+  compatibilityDate: '2024-07-29',
 })
