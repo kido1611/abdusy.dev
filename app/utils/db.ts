@@ -1,4 +1,4 @@
-import { H3Event } from 'h3'
+import type { H3Event } from 'h3'
 import { drizzle } from 'drizzle-orm/libsql'
 
 import { createClient } from '@libsql/client'
@@ -8,7 +8,7 @@ export default (event?: H3Event) => {
 
   const connection = createClient({
     url: runtimeConfig.tursoUrl,
-    authToken: runtimeConfig.tursoAuthToken
+    authToken: runtimeConfig.tursoAuthToken,
   })
 
   return drizzle(connection)

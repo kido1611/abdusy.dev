@@ -1,10 +1,19 @@
 <template>
   <div>
     <p>Refresh halaman ini setelah tampil, maka akan keluar warning hydration mismatch.</p>
-    <NuxtLink to="/examples/hydration-use-state"> Fix </NuxtLink>
+    <NuxtLink to="/examples/hydration-use-state">
+      Fix
+    </NuxtLink>
     <ul>
-      <li v-for="link in linkList" :key="link.url">
-        <NuxtLink :to="link.url" :external="true" target="_blank">
+      <li
+        v-for="link in linkList"
+        :key="link.url"
+      >
+        <NuxtLink
+          :to="link.url"
+          :external="true"
+          target="_blank"
+        >
           {{ link.name }}
         </NuxtLink>
       </li>
@@ -23,7 +32,7 @@ function generateRandomLinks() {
     const link = generateRandomLink()
     links.push({
       name: 'data' + i,
-      url: link
+      url: link,
     })
   }
   return links

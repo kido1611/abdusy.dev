@@ -4,9 +4,15 @@
 
     <p>User: {{ user }}</p>
     <div class="flex flex-row items-center space-x-3">
-      <button @click="login">Login</button>
-      <button @click="logout">Logout</button>
-      <button @click="change">Change</button>
+      <button @click="login">
+        Login
+      </button>
+      <button @click="logout">
+        Logout
+      </button>
+      <button @click="change">
+        Change
+      </button>
     </div>
   </section>
 </template>
@@ -17,7 +23,7 @@ import { ProvideInjectKey } from '@/symbols'
 const { user, login, logout } = inject(ProvideInjectKey, {
   user: undefined,
   login: () => {},
-  logout: () => {}
+  logout: () => {},
 })
 
 function change() {

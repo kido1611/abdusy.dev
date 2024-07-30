@@ -13,7 +13,7 @@ export const useUrlstate = (key: string, defaultValue: string = '', isReplace: b
     router.push({
       path: route.path,
       query: currentQuery,
-      replace: isReplace
+      replace: isReplace,
     })
   })
 

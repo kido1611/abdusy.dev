@@ -2,10 +2,10 @@ import { defineStore } from 'pinia'
 
 export const useCounterStorageStore = defineStore('counterStorageStore', {
   state: () => ({
-    count: 0
+    count: 0,
   }),
   getters: {
-    doubleCount: (state) => state.count * 2
+    doubleCount: state => state.count * 2,
   },
   actions: {
     increment() {
@@ -13,9 +13,9 @@ export const useCounterStorageStore = defineStore('counterStorageStore', {
     },
     decrement() {
       this.count--
-    }
+    },
   },
   persist: {
-    storage: persistedState.localStorage
-  }
+    storage: persistedState.localStorage,
+  },
 })

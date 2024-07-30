@@ -4,5 +4,11 @@
     "*.layout-template": "vue",
     "*.vue": "vue",
     "*.css": "tailwindcss"
-  }
+  },
+  "prettier.enable": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ]
 }

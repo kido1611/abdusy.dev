@@ -1,11 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {
-    enabled: true,
-
-    timeline: {
-      enabled: true
-    }
+    enabled: true
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -13,18 +9,14 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia-plugin-persistedstate/nuxt',
-    'nuxt-icon',
-    '@nuxtjs/eslint-module'
+    '@nuxt/eslint',
+    '@nuxt/icon'
   ],
   content: {
     highlight: {
       theme: 'github-dark'
     }
   },
-  // typescript: {
-  //   strict: true,
-  //   typeCheck: true
-  // },
   runtimeConfig: {
     tursoUrl: '',
     tursoAuthToken: '',
@@ -32,12 +24,16 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
-    '/blogs': { prerender: true },
     '/blogs/**': { prerender: true },
     '/api/**': { cors: true }
   },
-  future: {
-    compatibilityVersion: 4,
+  eslint: {
+    config: {
+      stylistic: true
+    }
   },
-  compatibilityDate: '2024-07-29',
+  future: {
+    compatibilityVersion: 4
+  },
+  compatibilityDate: '2024-07-29'
 })

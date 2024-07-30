@@ -2,7 +2,7 @@
 export default {
   content: ['content/**/*.md'],
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [require('@tailwindcss/typography')],
 }

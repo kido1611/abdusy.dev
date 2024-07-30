@@ -4,12 +4,16 @@
     <section>
       <h2>Visible</h2>
       <p>State: {{ visibleState }}</p>
-      <button @click="changeVisible">Change</button>
+      <button @click="changeVisible">
+        Change
+      </button>
     </section>
     <section>
       <h2>Filter</h2>
       <p>State: {{ filterState }}</p>
-      <button @click="changeFilter">Change</button>
+      <button @click="changeFilter">
+        Change
+      </button>
     </section>
   </div>
 </template>

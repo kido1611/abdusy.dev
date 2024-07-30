@@ -8,34 +8,36 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore .",
     "drizzle-generate": "drizzle-kit generate:sqlite",
     "drizzle-push": "drizzle-kit push:sqlite",
     "drizzle-studio": "drizzle-kit studio",
     "prettier": "prettier",
-    "format": "prettier --write ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@nuxt/content": "latest",
-    "@nuxt/eslint-config": "^0.2.0",
-    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxt/eslint": "^0.4.0",
+    "@nuxt/eslint-config": "^0.4.0",
+    "@nuxt/icon": "^1.4.0",
     "@nuxtjs/tailwindcss": "latest",
     "@pinia-plugin-persistedstate/nuxt": "latest",
     "@pinia/nuxt": "latest",
     "@tailwindcss/typography": "^0.5.10",
-    "@vue/eslint-config-prettier": "^9.0.0",
     "@vueuse/nuxt": "latest",
-    "drizzle-kit": "^0.20.14",
-    "eslint": "^8.56.0",
+    "drizzle-kit": "^0.23.0",
+    "eslint": "^9.8.0",
     "nuxt": "^3.12.4",
-    "nuxt-icon": "^0.6.8",
+    "typescript": "^5.5.4",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@libsql/client": "^0.5.0",
+    "@iconify-json/vscode-icons": "^1.1.36",
+    "@libsql/client": "^0.7.0",
     "@vercel/analytics": "^1.2.2",
-    "drizzle-orm": "^0.29.3",
+    "drizzle-orm": "^0.32.1",
     "wrangler": "^3.37.0"
-  }
+  },
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }

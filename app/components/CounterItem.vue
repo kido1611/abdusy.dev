@@ -23,16 +23,15 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 defineProps<{
   title: string
   count: number
-  doubleCount?: number
+  doubleCount: number
 }>()
 
 const emit = defineEmits<{
-  (e: 'increment'): void
-  (e: 'decrement'): void
+  (e: 'increment' | 'decrement'): void
 }>()
 </script>
 

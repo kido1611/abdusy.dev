@@ -11,6 +11,6 @@ export const useCounter = () => {
     count,
     doubleCount,
     increment,
-    decrement
+    decrement,
   }
 }

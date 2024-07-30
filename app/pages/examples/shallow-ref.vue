@@ -8,7 +8,11 @@
     <p>Counter 2 shallowRef: {{ shallowCounter2.count }}</p>
 
     <div class="border-y border-gray-300 flex flex-wrap gap-4 py-4">
-      <button class="px-3 py-2 rounded-md bg-sky-200 text-sky-800" type="button" @click="counter++">
+      <button
+        class="px-3 py-2 rounded-md bg-sky-200 text-sky-800"
+        type="button"
+        @click="counter++"
+      >
         Increase Counter Ref
       </button>
       <button
@@ -77,7 +81,7 @@ function increaseShallowCounter() {
 
 function increaseShallowCounter2() {
   shallowCounter2.value = {
-    count: shallowCounter2.value.count + 1
+    count: shallowCounter2.value.count + 1,
   }
 }
 </script>

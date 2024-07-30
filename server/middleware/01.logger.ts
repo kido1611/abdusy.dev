@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
       .insert(logs)
       .values({
         ipAddress: ip || '',
-        path: event.path
+        path: event.path,
       })
   }
 })

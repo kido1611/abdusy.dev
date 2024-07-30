@@ -2,7 +2,7 @@
 const route = useRoute()
 
 const { data, error, status } = await useAsyncData(`blogs-${route.path}`, () =>
-  queryContent().where({ _path: route.path }).findOne()
+  queryContent().where({ _path: route.path }).findOne(),
 )
 if (data.value) {
   useContentHead(data.value)
@@ -16,12 +16,20 @@ if (data.value) {
       id="toc"
       class="bg-gray-800 md:rounded-md col-[full] xl:col-[left-side] py-6 xl:px-6 xl:self-start xl:sticky xl:top-6 md:col-[breakout] blog-content *:col-[content] xl:mt-4 xl:!block"
     >
-      <label for="toc-list" class="text-xs text-gray-200 font-medium tracking-wide"
-        >Daftar Isi</label
+      <label
+        for="toc-list"
+        class="text-xs text-gray-200 font-medium tracking-wide"
+      >Daftar Isi</label>
+      <nav
+        id="toc-list"
+        name="Daftar Isi"
+        class="mt-2"
       >
-      <nav id="toc-list" name="Daftar Isi" class="mt-2">
         <ul class="space-y-1 *:text-sm *:text-white hover:*:underline">
-          <li v-for="toc in data?.body?.toc?.links" :key="toc.id">
+          <li
+            v-for="toc in data?.body?.toc?.links"
+            :key="toc.id"
+          >
             <NuxtLink :to="`#${toc.id}`">
               {{ toc.text }}
             </NuxtLink>
@@ -34,18 +42,18 @@ if (data.value) {
       tag="article"
       class="mt-10 xl:mt-0 prose mx-auto w-full col-[content]"
     >
-      <template #empty> error </template>
+      <template #empty>
+        error
+      </template>
     </ContentRenderer>
 
     <div class="col-[content] mt-10">
       <pre>
       error: {{ error }}
-    </pre
-      >
+    </pre>
       <pre>
       status: {{ status }}
-    </pre
-      >
+    </pre>
     </div>
   </main>
 </template>

@@ -6,12 +6,17 @@
       <p>User: {{ prop.user }}</p>
     </section>
 
-    <PropEventSubChild :user="prop.user" @login="login" @logout="logout" />
+    <PropEventSubChild
+      :user="prop.user"
+      @login="login"
+      @logout="logout"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
 import type { User } from '~/types'
+
 const prop = defineProps<{
   user?: User
 }>()

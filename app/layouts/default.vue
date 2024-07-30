@@ -8,17 +8,26 @@
           <nav>
             <ol class="inline-flex flex-row items-center">
               <li>
-                <NuxtLink class="px-4 py-2.5 rounded-md hover:bg-sky-200 block" to="/">
+                <NuxtLink
+                  class="px-4 py-2.5 rounded-md hover:bg-sky-200 block"
+                  to="/"
+                >
                   Home
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink class="px-4 py-2.5 rounded-md hover:bg-sky-200 block" to="/blogs">
+                <NuxtLink
+                  class="px-4 py-2.5 rounded-md hover:bg-sky-200 block"
+                  to="/blogs"
+                >
                   Blogs
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink class="px-4 py-2.5 rounded-md hover:bg-sky-200 block" to="/examples">
+                <NuxtLink
+                  class="px-4 py-2.5 rounded-md hover:bg-sky-200 block"
+                  to="/examples"
+                >
                   Examples
                 </NuxtLink>
               </li>
@@ -29,13 +38,16 @@
         <CurrentRoute />
       </div>
     </header>
-    <hr />
+    <hr>
     <slot />
 
     <footer>
       <p>
         This site was created using
-        <Icon name="vscode-icons:file-type-nuxt" size="28" />
+        <Icon
+          name="vscode-icons:file-type-nuxt"
+          size="28"
+        />
       </p>
     </footer>
   </div>

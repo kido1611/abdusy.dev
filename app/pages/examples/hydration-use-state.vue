@@ -2,8 +2,15 @@
   <div>
     <p>Coba refresh halaman ini, maka tidak akan muncul warning hydration missmatch.</p>
     <ul>
-      <li v-for="link in linkList" :key="link.url">
-        <NuxtLink :to="link.url" :external="true" target="_blank">
+      <li
+        v-for="link in linkList"
+        :key="link.url"
+      >
+        <NuxtLink
+          :to="link.url"
+          :external="true"
+          target="_blank"
+        >
           {{ link.name }}
         </NuxtLink>
       </li>
@@ -13,6 +20,7 @@
 
 <script lang="ts" setup>
 import type { Link } from '~/types'
+
 const linkList = useState<Link[]>('random-links', () => generateRandomLinks())
 
 function generateRandomLinks() {
@@ -21,7 +29,7 @@ function generateRandomLinks() {
     const link = generateRandomLink()
     links.push({
       name: 'data' + i,
-      url: link
+      url: link,
     })
   }
   return links

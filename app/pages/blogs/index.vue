@@ -23,7 +23,12 @@
     <pre>
       status: {{ status }}
     </pre>
-    <button type="button" @click="refreshBlogs">refresh</button>
+    <button
+      type="button"
+      @click="refreshBlogs"
+    >
+      refresh
+    </button>
   </div>
 </template>
 
@@ -32,29 +37,29 @@ useSeoMeta({
   title: 'Blogs',
   description: 'Anything I have written',
   ogTitle: 'Blogs',
-  ogDescription: 'Anything I have written'
+  ogDescription: 'Anything I have written',
 })
 
 useHead({
   htmlAttrs: {
-    lang: 'id'
-  }
+    lang: 'id',
+  },
 })
 
 const {
   data: blogs,
   error,
   status,
-  refresh
+  refresh,
 } = await useAsyncData('blogs', () =>
   queryContent()
     .sort({ created_at: -1 })
     .only(['_path', 'title', 'description', 'author', 'created_at'])
-    .find()
+    .find(),
 )
 
 function refreshBlogs() {
-refresh();
+  refresh()
 }
 </script>
 

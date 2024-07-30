@@ -8,15 +8,24 @@
     </p>
 
     <div class="*:block mt-6">
-      <CustomInput v-model="value" label="Judul" />
+      <CustomInput
+        v-model="value"
+        label="Judul"
+      />
       <p>Value: {{ value }}</p>
     </div>
     <div class="*:block mt-6">
-      <CustomInputOld v-model="value" label="Nama Depan Old" />
+      <CustomInputOld
+        v-model="value"
+        label="Nama Depan Old"
+      />
       <p>Value: {{ value }}</p>
     </div>
     <div class="*:block mt-6">
-      <MultipleForm v-model:last-name="value" v-model:first-name="firstName" />
+      <MultipleForm
+        v-model:last-name="value"
+        v-model:first-name="firstName"
+      />
       <p>First Name: {{ firstName }}</p>
       <p>Last Name: {{ value }}</p>
     </div>

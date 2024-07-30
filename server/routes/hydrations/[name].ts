@@ -5,6 +5,6 @@ export default defineEventHandler(async (event: H3Event) => {
 
   return {
     name: name,
-    message: 'Hello Hydration, ' + name
+    message: 'Hello Hydration, ' + name,
   }
 })

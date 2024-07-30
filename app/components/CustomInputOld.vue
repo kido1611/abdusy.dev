@@ -1,13 +1,16 @@
 <template>
   <div class="*:block">
-    <label class="text-sm" :for="inputId">{{ label }}</label>
+    <label
+      class="text-sm"
+      :for="inputId"
+    >{{ label }}</label>
     <input
       :id="inputId"
       :value="modelValue"
       type="text"
       class="px-3 py-2 rounded border border-gray-300"
       @input="handleChange"
-    />
+    >
   </div>
 </template>
 
@@ -20,7 +23,7 @@ const emit = defineEmits<{
 
 defineProps<{
   label: string
-  modelValue: any
+  modelValue: string | number
 }>()
 
 function handleChange(event: Event) {

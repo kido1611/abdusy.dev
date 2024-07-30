@@ -7,7 +7,7 @@ export const logs = sqliteTable('logs', {
   path: text('path').notNull(),
   createdAt: text('created_at')
     .notNull()
-    .default(sql`CURRENT_TIMESTAMP`)
+    .default(sql`CURRENT_TIMESTAMP`),
 })
 
 export type Log = typeof logs.$inferSelect
