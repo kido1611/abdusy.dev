@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
-    '/blogs/**': { prerender: true },
+    '/blogs/**': { prerender: true, static: true },
     '/api/**': { cors: true }
   },
   eslint: {
