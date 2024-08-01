@@ -20,6 +20,7 @@
     "@nuxt/eslint": "^0.4.0",
     "@nuxt/eslint-config": "^0.4.0",
     "@nuxt/icon": "^1.4.0",
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/tailwindcss": "latest",
     "@pinia-plugin-persistedstate/nuxt": "latest",
     "@pinia/nuxt": "latest",

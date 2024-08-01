@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxt/eslint',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    "@nuxt/image"
   ],
   content: {
     highlight: {
