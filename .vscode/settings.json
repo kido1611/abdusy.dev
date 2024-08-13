@@ -10,5 +10,6 @@
     "javascript",
     "javascriptreact",
     "vue"
-  ]
+  ],
+  "editor.tabSize": 2
 }
