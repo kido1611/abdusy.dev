@@ -23,7 +23,6 @@
     "@vueuse/nuxt": "latest",
     "drizzle-kit": "^0.24.0",
     "nuxt": "^3.17.4",
-    "typescript": "^5.5.4",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
   },
