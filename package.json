@@ -28,7 +28,7 @@
     "@vueuse/nuxt": "latest",
     "drizzle-kit": "^0.24.0",
     "eslint": "^9.9.0",
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.17.4",
     "typescript": "^5.5.4",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
@@ -40,5 +40,5 @@
     "drizzle-orm": "^0.33.0",
     "wrangler": "^3.70.0"
   },
-  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
