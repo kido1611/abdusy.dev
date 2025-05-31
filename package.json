@@ -16,7 +16,6 @@
   "devDependencies": {
     "@nuxt/content": "latest",
     "@nuxt/icon": "^1.4.5",
-    "@nuxt/image": "^1.7.0",
     "@pinia/nuxt": "latest",
     "@tailwindcss/typography": "^0.5.14",
     "@vueuse/nuxt": "latest",

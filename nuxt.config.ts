@@ -6,13 +6,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
   css: ["~/assets/css/main.css"],
-  modules: [
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@nuxt/content",
-    "@nuxt/icon",
-    "@nuxt/image",
-  ],
+  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxt/content", "@nuxt/icon"],
   content: {
     build: {
       markdown: {
