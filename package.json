@@ -16,7 +16,6 @@
     "@nuxt/content": "latest",
     "@nuxt/icon": "^1.4.5",
     "@nuxt/image": "^1.7.0",
-    "@pinia-plugin-persistedstate/nuxt": "latest",
     "@pinia/nuxt": "latest",
     "@tailwindcss/typography": "^0.5.14",
     "@vueuse/nuxt": "latest",
@@ -30,6 +29,7 @@
     "@libsql/client": "^0.9.0",
     "@tailwindcss/vite": "^4.1.8",
     "drizzle-orm": "^0.33.0",
+    "pinia": "^3.0.2",
     "tailwindcss": "^4.1.8",
     "wrangler": "^3.70.0"
   },

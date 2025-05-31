@@ -1,18 +1,17 @@
-import { defineStore, skipHydrate } from 'pinia'
-import { useLocalStorage } from '@vueuse/core'
+import { defineStore, skipHydrate } from "pinia";
 
-export const useCounterStore = defineStore('counterStore', () => {
-  const count = useLocalStorage('counter-local-store', 0)
+export const useCounterStore = defineStore("counterStore", () => {
+  const count = ref(0);
 
-  const doubleCount = computed(() => count.value * 2)
+  const doubleCount = computed(() => count.value * 2);
 
   function increment() {
-    count.value++
+    count.value++;
   }
 
   function decrement() {
-    count.value--
+    count.value--;
   }
 
-  return { count: skipHydrate(count), doubleCount, increment, decrement }
-})
+  return { count: skipHydrate(count), doubleCount, increment, decrement };
+});
