@@ -14,8 +14,12 @@ export default defineNuxtConfig({
     "@nuxt/image",
   ],
   content: {
-    highlight: {
-      theme: "github-dark",
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-dark",
+        },
+      },
     },
   },
   runtimeConfig: {
@@ -36,4 +40,3 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 });
-

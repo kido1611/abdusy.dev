@@ -4,8 +4,8 @@
     <div class="flex flex-col space-y-4 max-w-[70ch] mx-auto">
       <NuxtLink
         v-for="blog in blogs"
-        :key="blog._path"
-        :to="blog._path"
+        :key="blog.path"
+        :to="blog.path"
         class="block border border-gray-300 rounded p-4"
       >
         <h2>{{ blog.title }}</h2>
@@ -23,43 +23,38 @@
     <pre>
       status: {{ status }}
     </pre>
-    <button
-      type="button"
-      @click="refreshBlogs"
-    >
-      refresh
-    </button>
+    <button type="button" @click="refreshBlogs">refresh</button>
   </div>
 </template>
 
 <script lang="ts" setup>
 useSeoMeta({
-  title: 'Blogs',
-  description: 'Anything I have written',
-  ogTitle: 'Blogs',
-  ogDescription: 'Anything I have written',
-})
+  title: "Blogs",
+  description: "Anything I have written",
+  ogTitle: "Blogs",
+  ogDescription: "Anything I have written",
+});
 
 useHead({
   htmlAttrs: {
-    lang: 'id',
+    lang: "id",
   },
-})
+});
 
 const {
   data: blogs,
   error,
   status,
   refresh,
-} = await useAsyncData('blogs', () =>
-  queryContent()
-    .sort({ created_at: -1 })
-    .only(['_path', 'title', 'description', 'author', 'created_at'])
-    .find(),
-)
+} = await useAsyncData("blogs", () =>
+  queryCollection("blogs")
+    .order("created_at", "DESC")
+    .select("path", "title", "description", "author", "created_at")
+    .all(),
+);
 
 function refreshBlogs() {
-  refresh()
+  refresh();
 }
 </script>
 

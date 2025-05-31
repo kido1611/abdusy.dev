@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
 const { data, error, status } = await useAsyncData(`blogs-${route.path}`, () =>
-  queryContent().where({ _path: route.path }).findOne(),
-)
-if (data.value) {
-  useContentHead(data.value)
-}
+  queryCollection("blogs").where("path", "=", route.path).first(),
+);
+// if (data.value) {
+//   useContentHead(data.value);
+// }
 </script>
 
 <template>
@@ -19,17 +19,11 @@ if (data.value) {
       <label
         for="toc-list"
         class="text-xs text-gray-200 font-medium tracking-wide"
-      >Daftar Isi</label>
-      <nav
-        id="toc-list"
-        name="Daftar Isi"
-        class="mt-2"
+        >Daftar Isi</label
       >
+      <nav id="toc-list" name="Daftar Isi" class="mt-2">
         <ul class="space-y-1 *:text-sm *:text-white hover:*:underline">
-          <li
-            v-for="toc in data?.body?.toc?.links"
-            :key="toc.id"
-          >
+          <li v-for="toc in data?.body?.toc?.links" :key="toc.id">
             <NuxtLink :to="`#${toc.id}`">
               {{ toc.text }}
             </NuxtLink>
@@ -42,18 +36,18 @@ if (data.value) {
       tag="article"
       class="mt-10 xl:mt-0 prose mx-auto w-full col-[content]"
     >
-      <template #empty>
-        error
-      </template>
+      <template #empty> error </template>
     </ContentRenderer>
 
     <div class="col-[content] mt-10">
       <pre>
       error: {{ error }}
-    </pre>
+    </pre
+      >
       <pre>
       status: {{ status }}
-    </pre>
+    </pre
+      >
     </div>
   </main>
 </template>
@@ -68,7 +62,10 @@ if (data.value) {
   --full-size: minmax(var(--padding-inline), 1fr);
   --side-size: minmax(0, var(--side-width));
   --breakout-size: minmax(0, var(--breakout-inline));
-  --content-size: min(100% - (var(--padding-inline) * 2), var(--content-max-width));
+  --content-size: min(
+    100% - (var(--padding-inline) * 2),
+    var(--content-max-width)
+  );
 
   @apply grid;
   @apply grid-cols-[[full-start]_var(--full-size)_[breakout-start]_var(--breakout-size)_[content-start]_var(--content-size)_[content-end]_var(--breakout-size)_[breakout-end]_var(--full-size)_[full-end]];
