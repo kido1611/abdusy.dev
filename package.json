@@ -10,15 +10,10 @@
     "postinstall": "nuxt prepare",
     "drizzle-generate": "drizzle-kit generate:sqlite",
     "drizzle-push": "drizzle-kit push:sqlite",
-    "drizzle-studio": "drizzle-kit studio",
-    "prettier": "prettier",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "drizzle-studio": "drizzle-kit studio"
   },
   "devDependencies": {
     "@nuxt/content": "latest",
-    "@nuxt/eslint": "^0.5.0",
-    "@nuxt/eslint-config": "^0.5.0",
     "@nuxt/icon": "^1.4.5",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/tailwindcss": "latest",
@@ -27,7 +22,6 @@
     "@tailwindcss/typography": "^0.5.14",
     "@vueuse/nuxt": "latest",
     "drizzle-kit": "^0.24.0",
-    "eslint": "^9.9.0",
     "nuxt": "^3.17.4",
     "typescript": "^5.5.4",
     "vue": "^3.4.37",
