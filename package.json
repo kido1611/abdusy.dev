@@ -8,9 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "drizzle-generate": "drizzle-kit generate:sqlite",
-    "drizzle-push": "drizzle-kit push:sqlite",
-    "drizzle-studio": "drizzle-kit studio"
+    "db:generate": "drizzle-kit generate",
+    "db:up": "drizzle-kit up",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "devDependencies": {
     "@nuxt/content": "latest",
@@ -19,16 +20,17 @@
     "@pinia/nuxt": "latest",
     "@tailwindcss/typography": "^0.5.14",
     "@vueuse/nuxt": "latest",
-    "drizzle-kit": "^0.24.0",
+    "dotenv": "^16.5.0",
+    "drizzle-kit": "^0.31.1",
     "nuxt": "^3.17.4",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
   },
   "dependencies": {
     "@iconify-json/vscode-icons": "^1.1.37",
-    "@libsql/client": "^0.9.0",
+    "@libsql/client": "^0.15.8",
     "@tailwindcss/vite": "^4.1.8",
-    "drizzle-orm": "^0.33.0",
+    "drizzle-orm": "^0.44.1",
     "pinia": "^3.0.2",
     "tailwindcss": "^4.1.8",
     "wrangler": "^3.70.0"
