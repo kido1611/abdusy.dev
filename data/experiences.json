@@ -1,0 +1,64 @@
+[
+  {
+    "position": "Web Developer",
+    "company": {
+      "name": null,
+      "location": "Semarang, Indonesia"
+    },
+    "date": {
+      "start": "2019",
+      "end": null
+    },
+    "jobs": [
+      "Create an e-commerce web applications to sell digital products, and another paid services.",
+      "Create script for auto-deployment."
+    ],
+    "stacks": [
+      "Laravel",
+      "PHP",
+      "MariaDB",
+      "Vue",
+      "HTML",
+      "CSS",
+      "Docker",
+      "Linux"
+    ]
+  },
+  {
+    "position": "Android Developer",
+    "company": {
+      "name": null,
+      "location": "Semarang, Indonesia"
+    },
+    "date": {
+      "start": "2020",
+      "end": "2022"
+    },
+    "jobs": [
+      "Create an Android application to show job vacancies.",
+      "Create a backend application to store job vacancies data.",
+      "Maintain and publish Android app to PlayStore"
+    ],
+    "stacks": ["Java", "Kotlin", "Jetpack Compose", "Laravel", "PHP", "MariaDB"]
+  },
+  {
+    "position": "Programmer - Wheeled Soccer Division",
+    "company": {
+      "name": "Robotic Research Center (R2C)",
+      "location": "Salatiga, Indonesia"
+    },
+    "date": {
+      "start": "2017",
+      "end": "2019"
+    },
+    "jobs": [
+      "R2C is an organization in Satya Wacana Christian University (Indonesia) that doing research about robotics, and used it for Indonesia Robot Contest.",
+      "Migrate build tools from g++ into CMake, refactoring code with reduce duplicate code into library.",
+      "Create an algorithm to track and follow the ball.",
+      "Developed a system on Arduino to read sensors and command data from PC to control actuators.",
+      "Create a two-way communication system between PC and microcontroller for real-time data exchange.",
+      "Research and develop a system to detect field lines and guess the shape."
+    ],
+    "stacks": ["C/C++", "OpenCV", "Linux", "Arduino"]
+  }
+]

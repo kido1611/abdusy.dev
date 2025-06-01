@@ -20,9 +20,12 @@ export default defineNuxtConfig({
     tursoUrl: "",
     tursoAuthToken: "",
     isLoggingEnabled: false,
+    public: {
+      availableForWork: true,
+    },
   },
   routeRules: {
-    "/": { prerender: true },
+    "/": { prerender: true, static: true },
     "/blogs/**": { prerender: true, static: true },
     "/api/**": { cors: true },
   },
