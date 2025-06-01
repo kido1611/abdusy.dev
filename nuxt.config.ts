@@ -15,6 +15,11 @@ export default defineNuxtConfig({
         },
       },
     },
+    database: {
+      type: "libsql",
+      url: process.env.NUXT_TURSO_URL ?? "",
+      authToken: process.env.NUXT_TURSO_AUTH_TOKEN ?? "",
+    },
   },
   runtimeConfig: {
     tursoUrl: "",
