@@ -1,3 +1,6 @@
 export default defineAppConfig({
-  nuxtIcon: {},
-})
+  icon: {
+    mode: "css",
+    cssLayer: "base",
+  },
+});
