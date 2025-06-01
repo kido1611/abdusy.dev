@@ -53,6 +53,8 @@ const {
     .all(),
 );
 
+prerenderRoutes(blogs.value?.map((post) => `${post.path}`) ?? []);
+
 function refreshBlogs() {
   refresh();
 }
