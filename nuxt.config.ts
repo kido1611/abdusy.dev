@@ -20,6 +20,9 @@ export default defineNuxtConfig({
       url: process.env.NUXT_TURSO_URL ?? "",
       authToken: process.env.NUXT_TURSO_AUTH_TOKEN ?? "",
     },
+    experimental: {
+      sqliteConnector: "native",
+    },
   },
   runtimeConfig: {
     tursoUrl: "",
