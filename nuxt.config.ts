@@ -43,6 +43,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-07-29",
   vite: {
     plugins: [tailwindcss()],
+    // experimental: {
+    //   enableNativePlugin: true,
+    // },
   },
   app: {
     head: {

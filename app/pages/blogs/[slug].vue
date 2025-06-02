@@ -52,7 +52,9 @@ const { data, error, status } = await useAsyncData(`blogs-${route.path}`, () =>
   </main>
 </template>
 
-<style scoped lang="postcss">
+<style scoped>
+@reference "../../assets/css/main.css"
+
 .blog-content {
   --padding-inline: 1rem;
   --content-max-width: 65ch;
