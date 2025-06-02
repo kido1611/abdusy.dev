@@ -20,6 +20,9 @@ export default defineNuxtConfig({
       url: process.env.NUXT_TURSO_URL ?? "",
       authToken: process.env.NUXT_TURSO_AUTH_TOKEN ?? "",
     },
+    experimental: {
+      sqliteConnector: "native",
+    },
   },
   runtimeConfig: {
     tursoUrl: "",
@@ -40,6 +43,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-07-29",
   vite: {
     plugins: [tailwindcss()],
+    // experimental: {
+    //   enableNativePlugin: true,
+    // },
   },
   app: {
     head: {
