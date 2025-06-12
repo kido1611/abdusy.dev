@@ -40,7 +40,7 @@ const contacts = [
       <h1 class="text-6xl font-light">Hello There,</h1>
       <p class="text-xl mt-6 text-neutral-100">I'm Muhammad Abdusy Syukur,</p>
       <p class="text-xl mt-2 text-neutral-100">
-        Software Developer, with experience creating Web Applications, Android
+        Software Developer with experience creating Web Applications, Android
         applications, and Embedded Systems.
       </p>
       <div class="mt-12">
