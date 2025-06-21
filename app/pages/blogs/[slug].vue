@@ -11,34 +11,41 @@ const { data, error, status } = await useAsyncData(`blogs-${route.path}`, () =>
 
 <template>
   <main class="blog-content py-10">
-    <section
-      v-if="data"
-      id="toc"
-      class="bg-gray-800 md:rounded-md col-[full] xl:col-[left-side] py-6 xl:px-6 xl:self-start xl:sticky xl:top-6 md:col-[breakout] blog-content *:col-[content] xl:mt-4 xl:!block"
-    >
-      <label
-        for="toc-list"
-        class="text-xs text-gray-200 font-medium tracking-wide"
-        >Daftar Isi</label
+    <template v-if="data">
+      <section
+        id="toc"
+        class="bg-gray-800 md:rounded-md col-[full] xl:col-[left-side] py-6 xl:px-6 xl:self-start xl:sticky xl:top-6 md:col-[breakout] blog-content *:col-[content] xl:mt-4 xl:!block"
       >
-      <nav id="toc-list" name="Daftar Isi" class="mt-2">
-        <ul class="space-y-1 *:text-sm *:text-white hover:*:underline">
-          <li v-for="toc in data?.body?.toc?.links" :key="toc.id">
-            <NuxtLink :to="`#${toc.id}`">
-              {{ toc.text }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
-    </section>
-    <ContentRenderer
-      :value="data as any"
-      tag="article"
-      class="mt-10 xl:mt-0 prose mx-auto w-full col-[content]"
-    >
-      <template #empty> error </template>
-    </ContentRenderer>
-
+        <label
+          for="toc-list"
+          class="text-xs text-gray-200 font-medium tracking-wide"
+          >Daftar Isi</label
+        >
+        <nav id="toc-list" name="Daftar Isi" class="mt-2">
+          <ul class="space-y-1 *:text-sm *:text-white hover:*:underline">
+            <li v-for="toc in data?.body?.toc?.links" :key="toc.id">
+              <NuxtLink :to="`#${toc.id}`">
+                {{ toc.text }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <ContentRenderer
+        :value="data as any"
+        tag="article"
+        class="mt-10 xl:mt-0 prose mx-auto w-full col-[content]"
+      >
+        <template #empty> error </template>
+      </ContentRenderer>
+    </template>
+    <template v-else>
+      <div class="empty-page">
+        <h1>Page Not Found</h1>
+        <p>Oops! The content you're looking for doesn't exist.</p>
+        <NuxtLink to="/">Go back home</NuxtLink>
+      </div>
+    </template>
     <div class="col-[content] mt-10">
       <pre>
       error: {{ error }}

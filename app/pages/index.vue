@@ -34,7 +34,7 @@ const contacts = [
 
 <template>
   <main
-    class="max-w-[90ch] w-full mx-auto border-x border-neutral-800 px-6 lg:px-12 min-h-[100dvh] flex flex-col *:py-20"
+    class="max-w-[80ch] w-full mx-auto border-x border-neutral-800 px-6 lg:px-12 min-h-[100dvh] flex flex-col *:py-20"
   >
     <div class="max-w-lg !py-36">
       <h1 class="text-6xl font-light">Hello There,</h1>
