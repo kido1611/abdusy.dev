@@ -1,38 +1,9 @@
-<template>
-  <div>
-    <h1>Blogs</h1>
-    <div class="flex flex-col space-y-4 max-w-[70ch] mx-auto">
-      <NuxtLink
-        v-for="blog in blogs"
-        :key="blog.path"
-        :to="blog.path"
-        class="block border border-gray-300 rounded p-4"
-      >
-        <h2>{{ blog.title }}</h2>
-        <p>{{ blog.description }}</p>
-        <p>{{ blog.author }}</p>
-        <p>
-          Time:
-          <time :datetime="blog.created_at">{{ blog.created_at }}</time>
-        </p>
-      </NuxtLink>
-    </div>
-    <pre>
-      error: {{ error }}
-    </pre>
-    <pre>
-      status: {{ status }}
-    </pre>
-    <button type="button" @click="refreshBlogs">refresh</button>
-  </div>
-</template>
-
 <script lang="ts" setup>
 useSeoMeta({
-  title: "Blogs",
-  description: "Anything I have written",
-  ogTitle: "Blogs",
-  ogDescription: "Anything I have written",
+  title: "Articles",
+  description: "What was I writes...",
+  ogTitle: "Articles",
+  ogDescription: "What was I writes...",
 });
 
 useHead({
@@ -41,23 +12,78 @@ useHead({
   },
 });
 
-const {
-  data: blogs,
-  error,
-  status,
-  refresh,
-} = await useAsyncData("blogs", () =>
-  queryCollection("blogs")
-    .order("created_at", "DESC")
+const route = useRoute();
+
+const { data: articles, error } = await useAsyncData("blogs", () => {
+  if (route.query.tags) {
+    return queryCollection("blogs")
+      .where("is_published", "=", "true")
+      .where("tags", "LIKE", `%${route.query.tags}%`)
+      .select("path", "title", "description", "author", "created_at")
+      .order("created_at", "DESC")
+      .all();
+  }
+
+  return queryCollection("blogs")
+    .where("is_published", "=", "true")
     .select("path", "title", "description", "author", "created_at")
-    .all(),
-);
+    .order("created_at", "DESC")
+    .all();
+});
 
-prerenderRoutes(blogs.value?.map((post) => `${post.path}`) ?? []);
-
-function refreshBlogs() {
-  refresh();
-}
+prerenderRoutes(articles.value?.map((post) => `${post.path}`) ?? []);
 </script>
 
-<style></style>
+<template>
+  <div class="article-wrapper py-20">
+    <main class="article-wrapper-content flex flex-col">
+      <h1 class="mb-10 text-5xl font-light">Articles</h1>
+
+      <template v-if="articles && articles.length > 0">
+        <div class="flex flex-col gap-y-5">
+          <div v-for="blog in articles" :key="blog.path" class="relative">
+            <NuxtLink
+              :to="blog.path"
+              class="stretched-link hover:underline text-2xl"
+            >
+              {{ blog.title }}
+            </NuxtLink>
+
+            <p class="mt-1">{{ blog.description }}</p>
+            <p class="text-neutral-300">
+              <NuxtTime
+                :datetime="blog.created_at"
+                locale="id-ID"
+                day="numeric"
+                month="long"
+                year="numeric"
+              />
+            </p>
+          </div>
+        </div>
+      </template>
+
+      <template v-if="articles && articles.length === 0">
+        <div
+          class="flex flex-col items-center justify-center gap-y-3 h-[50dvh] text-neutral-300"
+        >
+          <p class="text-2xl italic font-medium">There is no articles.</p>
+
+          <p v-if="route.query.tags" class="text-sm">
+            Search: tags <strong>"{{ route.query.tags }}"</strong>
+          </p>
+        </div>
+      </template>
+
+      <template v-if="error">
+        <div
+          class="flex flex-col items-center justify-center gap-y-3 h-[50dvh] text-neutral-300"
+        >
+          <p class="text-2xl italic font-medium">
+            Error: {{ error?.message ?? "-" }} .
+          </p>
+        </div>
+      </template>
+    </main>
+  </div>
+</template>

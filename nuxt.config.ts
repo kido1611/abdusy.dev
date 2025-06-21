@@ -13,6 +13,9 @@ export default defineNuxtConfig({
         highlight: {
           theme: "github-dark",
         },
+        toc: {
+          depth: 3,
+        },
       },
     },
     database: {

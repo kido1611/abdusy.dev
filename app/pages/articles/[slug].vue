@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data, error } = await useAsyncData(`blogs-${route.path}`, () =>
-  queryCollection("blogs")
+const { data, error } = await useAsyncData(`articles:${route.path}`, () =>
+  queryCollection("articles")
     .path(route.path)
-    .where("is_published", "=", "true")
+    .where("is_published", "=", true)
     .first(),
 );
 if (!data.value) {
@@ -61,7 +61,7 @@ useSeoMeta({
           </span>
           <span v-for="tag in data.tags">
             <NuxtLink
-              :to="`/blogs/?tags=${tag}`"
+              :to="`/articles/?tags=${tag}`"
               class="hover:underline hover:text-white"
               ># {{ tag }}</NuxtLink
             >

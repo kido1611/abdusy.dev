@@ -9,6 +9,8 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         author: z.string(),
+        is_published: z.boolean(),
+        tags: z.array(z.string()),
         created_at: z.date(),
       }),
     }),

@@ -10,5 +10,51 @@
 }
 
 .stretched-link {
-  @apply after:absolute after:inset-0;
+  @apply after:absolute after:inset-0 after:content-[''];
+}
+
+.article-wrapper {
+  --padding-inline: 1.5rem;
+  --content-max-size: 70ch;
+  --breakout-max-size: 80ch;
+  --container-max-size: 1280px;
+
+  --breakout-distance: calc(var(--breakout-max-size) - var(--content-max-size));
+  --breakout-distance-half: calc(
+    (var(--breakout-max-size) - var(--content-max-size)) / 2
+  );
+  --container-distance: calc(
+    var(--container-max-size) - var(--breakout-max-size)
+  );
+  --container-distance-half: calc(
+    (var(--container-max-size) - var(--breakout-max-size)) / 2
+  );
+
+  --content-size: min(
+    100% - (var(--padding-inline) * 2),
+    var(--content-max-size)
+  );
+
+  @apply grid;
+  @apply grid-cols-[[full-start]_minmax(var(--padding-inline),1fr)_[container-start]_minmax(0,var(--container-distance-half))_[breakout-start]_minmax(0,var(--breakout-distance-half))_[content-start]_var(--content-size)_[content-end]_minmax(0,var(--breakout-distance-half))_[breakout-end]_minmax(0,var(--container-distance-half))_[container-end]_minmax(var(--padding-inline),1fr)_[full-end]];
+}
+
+.article-wrapper-full {
+  @apply col-[full];
+}
+
+.article-wrapper-container {
+  @apply col-[container];
+}
+
+.article-wrapper-breakout {
+  @apply col-[breakout];
+}
+
+.article-wrapper-content {
+  @apply col-[content];
+}
+
+.article-wrapper-toc {
+  @apply col-[container-end/breakout-end];
 }
