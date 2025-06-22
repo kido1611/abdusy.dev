@@ -94,7 +94,7 @@
 <script lang="ts" setup></script>
 
 <style scoped>
-@reference "../../assets/css/main.css"
+@reference "../../../../../app/assets/css/main.css"
 
 .content-grid {
   --padding-inline: 2rem;

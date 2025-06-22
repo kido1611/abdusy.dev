@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const counter = useComposableCounter();
+</script>
+
 <template>
   <CounterItem
     title="Composable Counter"
@@ -7,9 +11,3 @@
     @decrement="counter.decrement"
   />
 </template>
-
-<script lang="ts" setup>
-const counter = useCounter()
-</script>
-
-<style></style>

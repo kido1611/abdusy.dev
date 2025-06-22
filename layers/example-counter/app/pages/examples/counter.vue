@@ -1,20 +1,16 @@
+<script lang="ts" setup></script>
+
 <template>
   <ClientOnly>
     <div class="grid grid-cols-1 md:grid-cols-2">
       <ComposableCounter />
       <ComposableCounter />
-      <PiniaCounter />
-      <PiniaCounter />
-      <PiniaStorageCounter />
-      <PiniaStorageCounter />
-    </div>
 
-    <template #fallback>
-      <p>Loading...</p>
-    </template>
+      <PiniaCounter />
+      <PiniaCounter />
+
+      <LazyPiniaStorageCounter />
+      <LazyPiniaStorageCounter />
+    </div>
   </ClientOnly>
 </template>
-
-<script lang="ts" setup></script>
-
-<style></style>

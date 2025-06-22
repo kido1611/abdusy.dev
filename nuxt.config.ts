@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxt/content", "@nuxt/icon"],
+  modules: ["@vueuse/nuxt", "@nuxt/content", "@nuxt/icon"],
   content: {
     build: {
       markdown: {
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: "2024-07-29",
+  compatibilityDate: "2025-06-22",
   vite: {
     plugins: [tailwindcss()],
     // experimental: {

@@ -13,5 +13,5 @@ export const useCounterStore = defineStore("counterStore", () => {
     count.value--;
   }
 
-  return { count: skipHydrate(count), doubleCount, increment, decrement };
+  return { count: count, doubleCount, increment, decrement };
 });

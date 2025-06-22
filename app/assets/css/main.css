@@ -2,6 +2,8 @@
 
 @plugin "@tailwindcss/typography";
 
+@source "../../../layers/";
+
 .bg-stripes {
   /* source: https://hrcd.fr/playground/background-stripes */
   @apply w-full [background-size:4px_4px];
