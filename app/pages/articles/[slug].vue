@@ -73,7 +73,7 @@ useSeoMeta({
         <ContentRenderer
           :value="data as any"
           tag="article"
-          class="prose prose-invert max-w-none w-full"
+          class="prose prose-invert max-w-none w-full prose-headings:scroll-mt-16 prose-headings:has-[a]:*:no-underline prose-headings:has-[a]:*:hover:underline"
         />
       </div>
 
