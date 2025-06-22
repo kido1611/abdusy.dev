@@ -14,18 +14,18 @@ useHead({
 
 const route = useRoute();
 
-const { data: articles, error } = await useAsyncData("blogs", () => {
+const { data: articles, error } = await useAsyncData("articles", () => {
   if (route.query.tags) {
-    return queryCollection("blogs")
-      .where("is_published", "=", "true")
+    return queryCollection("articles")
+      .where("is_published", "=", true)
       .where("tags", "LIKE", `%${route.query.tags}%`)
       .select("path", "title", "description", "author", "created_at")
       .order("created_at", "DESC")
       .all();
   }
 
-  return queryCollection("blogs")
-    .where("is_published", "=", "true")
+  return queryCollection("articles")
+    .where("is_published", "=", true)
     .select("path", "title", "description", "author", "created_at")
     .order("created_at", "DESC")
     .all();
@@ -41,18 +41,18 @@ prerenderRoutes(articles.value?.map((post) => `${post.path}`) ?? []);
 
       <template v-if="articles && articles.length > 0">
         <div class="flex flex-col gap-y-5">
-          <div v-for="blog in articles" :key="blog.path" class="relative">
+          <div v-for="article in articles" :key="article.path" class="relative">
             <NuxtLink
-              :to="blog.path"
+              :to="article.path"
               class="stretched-link hover:underline text-2xl"
             >
-              {{ blog.title }}
+              {{ article.title }}
             </NuxtLink>
 
-            <p class="mt-1">{{ blog.description }}</p>
+            <p class="mt-1">{{ article.description }}</p>
             <p class="text-neutral-300">
               <NuxtTime
-                :datetime="blog.created_at"
+                :datetime="article.created_at"
                 locale="id-ID"
                 day="numeric"
                 month="long"

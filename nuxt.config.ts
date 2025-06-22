@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/": { prerender: true, static: true },
-    "/blogs/**": { prerender: true, static: true },
+    "/articles/**": { prerender: true, static: true },
     "/api/**": { cors: true },
   },
   future: {
